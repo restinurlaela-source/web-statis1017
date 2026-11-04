@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Siswa</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #E0F2FE;
+            color: #1E293B;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(30, 64, 175, 0.15);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        h1 {
+            text-align: center;
+            color: #4338CA;
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748B;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 145px 1fr;
+            gap: 12px;
+            align-items: start;
+            margin-bottom: 18px;
+        }
+
+        .form-group > label {
+            padding-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #CBD5E1;
+            border-radius: 6px;
+            background-color: #F8FAFC;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #6366F1;
+            box-shadow: 0 0 4px #A5B4FC;
+        }
+
+        .nama,
+        .telepon {
+            display: flex;
+            gap: 8px;
+        }
+
+        .pilihan {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 8px;
+        }
+
+        .pilihan label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            accent-color: #4338CA;
+        }
+
+        input[type="file"] {
+            font-size: 12px;
+        }
+
+        textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .tombol {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 12px 35px;
+            background-color: #4338CA;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #312E81;
+        }
+
+        .catatan {
+            font-size: 12px;
+            color: #64748B;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .form-group {
+                grid-template-columns: 1fr;
+                gap: 7px;
+            }
+
+            .form-group > label {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Formulir Pendaftaran Siswa</h1>
+    <p class="subtitle">Silakan isi data diri dengan lengkap dan benar</p>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="nomor">Nomor Pendaftaran:</label>
+            <input type="text" id="nomor" name="nomor"
+                   placeholder="Masukkan nomor pendaftaran" required>
+        </div>
+
+        <div class="form-group">
+            <label>Nama Lengkap:</label>
+            <div class="nama">
+                <input type="text" name="nama_depan"
+                       placeholder="Nama depan" required>
+                <input type="text" name="nama_belakang"
+                       placeholder="Nama belakang">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="ayah">Nama Ayah:</label>
+            <input type="text" id="ayah" name="nama_ayah"
+                   placeholder="Masukkan nama ayah">
+        </div>
+
+        <div class="form-group">
+            <label for="ibu">Nama Ibu:</label>
+            <input type="text" id="ibu" name="nama_ibu"
+                   placeholder="Masukkan nama ibu">
+        </div>
+
+        <div class="form-group">
+            <label for="lahir">Tanggal Lahir:</label>
+            <input type="date" id="lahir" name="tanggal_lahir" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telepon">Nomor HP:</label>
+            <div class="telepon">
+                <input type="text" value="+62"
+                       style="max-width: 65px;" readonly>
+                <input type="tel" id="telepon" name="telepon"
+                       placeholder="Nomor HP aktif" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Alamat Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="nama@email.com">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Kata Sandi:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Buat kata sandi" required>
+        </div>
+
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <div class="pilihan">
+                <label>
+                    <input type="radio" name="jenis_kelamin"
+                           value="Laki-laki" required>
+                    Laki-laki
+                </label>
+
+                <label>
+                    <input type="radio" name="jenis_kelamin"
+                           value="Perempuan">
+                    Perempuan
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Jurusan:</label>
+            <div class="pilihan">
+                <label>
+                    <input type="radio" name="jurusan"
+                           value="ATPH" required>
+                    ATPH
+                </label>
+
+                <label>
+                    <input type="radio" name="jurusan"
+                           value="TSM">
+                    TSM
+                </label>
+
+                <label>
+                    <input type="radio" name="jurusan"
+                           value="RPL">
+                    RPL
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="foto">Foto Siswa:</label>
+            <input type="file" id="foto" name="foto"
+                   accept="image/*">
+        </div>
+
+        <div class="form-group">
+            <label for="kota">Kota/Kabupaten:</label>
+            <input type="text" id="kota" name="kota"
+                   placeholder="Masukkan kota atau kabupaten">
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat Lengkap:</label>
+            <textarea id="alamat" name="alamat"
+                      placeholder="Masukkan alamat lengkap"></textarea>
+        </div>
+
+        <div class="tombol">
+            <button type="submit">Daftar Sekarang</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
